@@ -54,7 +54,20 @@ class main extends PluginBase implements CommandExecutor
 				
 				if (strtolower ( $args [0] ) == "f") 
 				{
-				 if( $args[1] ) 
+				 $ciao = true;
 				}
+				if (strtolower($args[0]) == "f" && ($args[0]) == "off")
+				{
+				$ciao = false
 				}
+				
+}
+public function onPlayerMove(PlayerMoveEvent $event){
+	if($ciao==true){
+$event->setCancelled(true);
+	}
+	if($ciao==false)
+	{
+$event->setCancelled(true);	
+	}
 }
